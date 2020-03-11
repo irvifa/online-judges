@@ -1,0 +1,19 @@
+function root(x, n):
+    if (x == 0):
+        return 0
+
+    lowerBound = 0
+    upperBound = max(1, x)
+    approxRoot = (upperBound + lowerBound) / 2
+
+    while (approxRoot - lowerBound >= 0.001):
+        if (power(approxRoot, n) > x):
+            upperBound = approxRoot
+        else if (power(approxRoot, n) < x):
+            lowerBound = approxRoot
+        else
+            break
+
+        approxRoot = (upperBound + lowerBound) / 2
+
+    return approxRoot

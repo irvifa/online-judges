@@ -1,0 +1,50 @@
+var row,col,i,j,bottom:integer;
+	flag:boolean;
+    full:array[1..20] of boolean;
+    maze:array[1..20,1..8] of char;
+
+procedure down(a,b:integer);
+begin
+   while (maze[a,b]='0') and (a<=row) do 
+   begin
+      maze[a,b]:='1';
+      maze[a-1,b]:='0';
+      inc(a);
+   end;
+end;
+
+begin
+   readln(row,col);
+   for i:=1 to row do 
+   begin
+      for j:=1 to col do read(maze[i,j]);
+      readln;
+   end;
+   
+   fillchar(full,sizeof(full),true);
+   flag:=false;   
+   repeat 
+   begin
+      for i:=1 to row do 
+      begin
+         for j:=1 to col do
+            if maze[i,j]='0' then full[i]:=false;
+         if full[i] then 
+         begin
+            flag:=true;
+            bottom:=i;
+            for j:=1 to col do maze[i,j]:='0';
+         end;
+      end;
+      for j:=1 to col do begin
+         for i:=bottom-1 downto 1 do begin
+            if maze[i,j]='1' then down(i+1,j);
+         end;
+      end;
+   end; until flag;
+   for i:=1 to row do begin
+      for j:=1 to col do write(maze[i,j]);
+      writeln;
+   end;
+end.
+

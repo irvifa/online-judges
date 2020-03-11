@@ -1,0 +1,13 @@
+- deep learning merupakan teknologi yang berusaha melakukan simulasi terhadap cara kerja korteks neuron, bagian otak manusia di mana sekitar 80% kegiatan berpikir terjadi. 
+- software tersebut menggunakan cara kerja yang menyerupai otak bekerja yaitu dengan cara mencari pola yang ada dan melakukan proses learning terhadap pola tersebut.
+- ide dasar dari proses tersebut adalah adanya teknologi neural networks, dengan adanya spesidikasi komputer yang semakin bagus serta pengembangan di bidang matematis, maka teknologi neural networs tadi bisa ditingkatkan dengan cara menambahkan virtual layer untuk networksnya. 
+- dengan jumlah layer yang semakin banyak tadi, maka proses recognition pattern yang ada pada image maupu speech dapat meningkat. 
+
+- contoh sample adalah image search pada youtube yang sedang berusaha diwujudkan oleh google 
+
+=======
+
+drop out adalah salah satu cara yang dapat digunakan untuk mengurangi fitur yang ada dalam neural network baik yang hidden maupun yang visible dalam sebuah neural networks. 
+
+secara sederhana, selama masa tarining, pada setiap contoh yang ada, feature detector dihapus dengan probabilitas q = 1 -p =0.5 dan sisa wight yang ada di-train dengan menggunakan backpropagation. setiap weight akan dibagi dan didistribusikan pada semua sample yang ada. selama masa prediksi, weight yang ada dibagi 2.
+
